@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-        <a-marker type="barcode" value="0">
+        <a-marker type="barcode" value="0"
+		raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+        >
             <a-entity
             position="0 0 0"
             rotation="0 0 0"
-            scale="0.5 0.5 0.5"
+            scale="1 1 1"
             gltf-model="res/Location0.glb"
+            gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
             ></a-entity>
         </a-marker>
         
@@ -18,8 +24,9 @@
             <a-entity
             position="0 0 0"
             rotation="0 0 0"
-            scale="0.5 0.5 0.5"
+            scale="1 1 1"
             gltf-model="res/Location1.glb"
+            gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
             ></a-entity>
         </a-marker>
         
@@ -27,8 +34,9 @@
             <a-entity
             position="0 0 0"
             rotation="0 0 0"
-            scale="0.5 0.5 0.5"
+            scale="1 1 1"
             gltf-model="res/Location2.glb"
+            gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
             ></a-entity>
         </a-marker>
         
@@ -36,8 +44,9 @@
             <a-entity
             position="0 0 0"
             rotation="0 0 0"
-            scale="0.5 0.5 0.5"
+            scale="1 1 1"
             gltf-model="res/Location3.glb"
+            gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
             ></a-entity>
         </a-marker>
         
@@ -45,8 +54,9 @@
             <a-entity
             position="0 0 0"
             rotation="0 0 0"
-            scale="0.5 0.5 0.5"
+            scale="1 1 1"
             gltf-model="res/Location4.glb"
+            gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
             ></a-entity>
         </a-marker>
         
@@ -54,8 +64,9 @@
             <a-entity
             position="0 0 0"
             rotation="0 0 0"
-            scale="0.5 0.5 0.5"
+            scale="1 1 1"
             gltf-model="res/Location5.glb"
+            gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
             ></a-entity>
         </a-marker>
         
@@ -63,8 +74,9 @@
             <a-entity
             position="0 0 0"
             rotation="0 0 0"
-            scale="0.5 0.5 0.5"
+            scale="1 1 1"
             gltf-model="res/Location6.glb"
+            gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
             ></a-entity>
         </a-marker>
         
@@ -72,8 +84,9 @@
             <a-entity
             position="0 0 0"
             rotation="0 0 0"
-            scale="0.5 0.5 0.5"
+            scale="1 1 1"
             gltf-model="res/Location7.glb"
+            gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
             ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
