@@ -5,7 +5,7 @@
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
-        <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' gesture-detector>
+        <a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' gesture-detector renderer="logarithmicDepthBuffer: true;">
         <a-marker type="barcode" value="0"
 		raycaster="objects: .clickable"
                 emitevents="true"
